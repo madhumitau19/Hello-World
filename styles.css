@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "receipt-narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(19, 19, 19);
+    background-color: rgb(255, 228, 56);
+    transition: all 0.5s ease-in-out;
+}
+
+body.dark{
+    background-color: rgb(19, 19, 19);
+    color: rgb(255, 103, 56); 
+}
+
+body::selection{
+    background: rgb(131, 33, 33); 
+    color: rgb(232, 244, 6);
+}
+
+.intro, .hello {
+    margin: 30px;
+}
+
+.hello{
+    font-size: 100px;
+}
+
+.intro{
+    font-size: 20px;
+    width: 70%;
+}
+
+
+.box{
+    width: 230px;
+    height: 230px;
+    background-color: rgb(69, 168, 52);
+    color:rgb(242, 241, 241);
+    border: solid 2px black;
+    border-radius: 30px;
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    line-height: 90%;
+    transition: all 0.2s ease-in-out;  
+}
+
+.box:hover{
+    scale: 90%;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    cursor: pointer;
+}
+
+.more{
+    left: 50px;
+    top: 400px;
+    font-size: 50px;
+    z-index: 7;
+    line-height: 80%; 
+}
+
+.box-1{
+    left: 50px;
+    top: 400px;
+    font-size: 20px;
+    z-index: 6;
+    background-color: rgb(29, 117, 189);
+}
+
+.box-2{
+    left: 50px;
+    top: 400px;
+    font-size: 20px;
+    z-index: 5;
+    background-color: rgb(95, 69, 212);
+}
+
+.box-3{
+    left: 50px;
+    top: 400px;
+    font-size: 20px;
+    z-index: 5;
+    background-color: rgb(214, 53, 158);
+}
+
+.box-4{
+    left: 50px;
+    top: 400px;
+    font-size: 20px;
+    z-index: 5;
+    background-color: rgb(222, 65, 65);
+}
+
+
+.more.open{
+    left: 50px;
+    top: 20%;
+    font-size: 50px;
+    z-index: 7;
+    line-height: 80%; 
+}
+
+.box-1.open{
+    left: 300px;
+    top: 30%;
+    font-size: 20px;
+    z-index: 6;
+
+}
+
+.box-2.open{
+    left: 550px;
+    top: 40%;
+    font-size: 20px;
+    z-index: 5;
+}
+
+.box-3.open{
+    left: 800px;
+    top: 50%;
+    font-size: 20px;
+    z-index: 5;
+}
+
+.box-4.open{
+    left: 1050px;
+    top: 60%;
+    font-size: 20px;
+    z-index: 5;
+}
+
+#mode {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+}
+#light{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#dark {
+    cursor: pointer;
+}
+
+#image {
+    width: 380px;
+    position: fixed;
+    right: 120px;
+    bottom: 90px;
+    z-index: -2;
+    transform: rotate(4deg);
+    
+}
+
+#image img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#gd1{
+    width: 200px;
+    position: fixed;
+    top: 100px;
+    right: 40%;
+}
+
+#gd2{
+    width: 350px;
+    position: fixed;
+    top: 500px;
+    left: 10%;
+}
+
+#gd3{
+    width: 200px;
+    position: fixed;
+    top: 50px;
+    left: 2%;
+}
+
+.gd{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -20;
+}
+
+body:has(.box-1:hover) .gd{
+    opacity: 1;
+    z-index: 20;
+}
+
+#r1{
+    width: 200px;
+    position: fixed;
+    top: 50px;
+    left: 20%;
+}
+#r2{
+    width: 230px;
+    position: fixed;
+    top: 100px;
+    left: 70%;
+}
+#r3{
+    width: 230px;
+    position: fixed;
+    bottom: 70px;
+    left: 60%;
+}
+
+.r{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -20;
+}
+
+body:has(.box-2:hover) .r{
+    opacity: 1;
+    z-index: 20;
+}
+
+#m1{
+    width: 330px;
+    position: fixed;
+    top: 30px;
+    right: 5%;
+}
+
+#m2{
+    width: 270px;
+    position: fixed;
+    bottom: 30px;
+    right: 70%;
+}
+
+#m3{
+    width: 230px;
+    position: fixed;
+    top: 70px;
+    left: 30%;
+}
+
+.m{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -20;
+}
+
+body:has(.box-3:hover) .m{
+    opacity: 1;
+    z-index: 20;
+}
+
+#f1{
+    width: 190px;
+    position: fixed;
+    top: 120px;
+    right: 10%;
+}
+
+#f2{
+    width: 200px;
+    position: fixed;
+    bottom: 30px;
+    right: 35%;
+}
+
+#f3{
+    width: 230px;
+    position: fixed;
+    top: 200px;
+    left: 40%;
+}
+
+.f{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -20;
+}
+
+body:has(.box-4:hover) .f{
+    opacity: 1;
+    z-index: 20;
+}
